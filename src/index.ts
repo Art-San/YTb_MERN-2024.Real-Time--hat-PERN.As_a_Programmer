@@ -23,6 +23,9 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`)
 })
 
+/*TODO: add socket.io to the server*/
+/*TODO: Configure this server for development*/
+
 // import express from "express";
 // import cookieParser from "cookie-parser";
 // import path from "path";
