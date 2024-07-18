@@ -1,41 +1,41 @@
-import { useState } from "react";
-import { useAuthContext } from "../context/AuthContext";
-import toast from "react-hot-toast";
+import { useState } from 'react'
+import { useAuthContext } from '../context/AuthContext'
+import toast from 'react-hot-toast'
 
-type SignupInputs = {
-	fullName: string;
-	username: string;
-	password: string;
-	confirmPassword: string;
-	gender: string;
-};
+type SignUpInputs = {
+  fullName: string
+  username: string
+  password: string
+  confirmPassword: string
+  gender: string
+}
 
-const useSignup = () => {
-	const [loading, setLoading] = useState(false);
-	const { setAuthUser } = useAuthContext();
+const useSignUp = () => {
+  const [loading, setLoading] = useState(false)
+  const { setAuthUser } = useAuthContext()
 
-	const signup = async (inputs: SignupInputs) => {
-		try {
-			setLoading(true);
-			const res = await fetch("/api/auth/signup", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(inputs),
-			});
-			const data = await res.json();
+  const signUp = async (inputs: SignUpInputs) => {
+    try {
+      setLoading(true)
+      const res = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(inputs)
+      })
+      const data = await res.json()
 
-			if (!res.ok) throw new Error(data.error);
-			setAuthUser(data);
-		} catch (error: any) {
-			console.error(error.message);
-			toast.error(error.message);
-		} finally {
-			setLoading(false);
-		}
-	};
+      if (!res.ok) throw new Error(data.error)
+      setAuthUser(data)
+    } catch (error: any) {
+      console.error(error.message)
+      toast.error(error.message)
+    } finally {
+      setLoading(false)
+    }
+  }
 
-	return { loading, signup };
-};
-export default useSignup;
+  return { loading, signUp }
+}
+export default useSignUp
