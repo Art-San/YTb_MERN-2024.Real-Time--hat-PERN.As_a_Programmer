@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import { useAuthContext } from './context/AuthContext'
 import { Toaster } from 'react-hot-toast'
 
+// messages 2:19:41
 function App() {
   const { authUser, isLoading } = useAuthContext()
 
