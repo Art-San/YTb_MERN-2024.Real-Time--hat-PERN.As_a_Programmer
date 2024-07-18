@@ -10,9 +10,9 @@ body {
   background-position: center;
 }
 
-/* .label-text {
+.label-text {
   color: white;
-} */
+}
 
 /* dark mode looking scrollbar */
 /* ::-webkit-scrollbar {
