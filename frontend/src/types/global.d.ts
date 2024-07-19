@@ -1,7 +1,7 @@
-// global.d.ts is a special file. Types added here can be used globally in the project without importing them.
+//global.d.ts — это специальный файл. Добавленные здесь типы можно использовать глобально в проекте без их импорта.
 
 type ConversationType = {
-	id: string;
-	fullName: string;
-	profilePic: string;
-};
+  id: string
+  fullName: string
+  profilePic: string
+}
