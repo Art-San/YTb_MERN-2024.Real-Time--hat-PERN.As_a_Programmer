@@ -13,7 +13,9 @@ const SearchInput = () => {
     e.preventDefault()
     if (!search) return
     if (search.length < 3) {
-      return toast.error('Search term must be at least 3 characters long')
+      return toast.error(
+        'Поисковый запрос должен содержать не менее 3 символов.'
+      )
     }
 
     const conversation = conversations.find((c: ConversationType) =>
