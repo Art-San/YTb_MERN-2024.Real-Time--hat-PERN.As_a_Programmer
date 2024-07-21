@@ -70,7 +70,7 @@ export const sendMessage = async (req: Request, res: Response) => {
       //     }
 
       const receiverSocketId = getReceiverSocketId(receiverId)
-
+      console.log(23, receiverSocketId)
       if (receiverSocketId) {
         io.to(receiverSocketId).emit('newMessage', newMessage)
       }

@@ -6,7 +6,7 @@ import Message from './Message'
 
 const Messages = () => {
   const { loading, messages } = useGetMessages()
-  // useListenMessages()
+  useListenMessages()
 
   const ref = useChatScroll(messages) as React.MutableRefObject<HTMLDivElement>
   // console.log(12, messages)

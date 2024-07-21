@@ -6,7 +6,6 @@ const MessageInput = () => {
   const [message, setMessage] = useState('')
 
   const { loading, sendMessage } = useSendMessage()
-  console.log(14, loading)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!message.trim()) return
