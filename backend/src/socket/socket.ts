@@ -37,3 +37,4 @@ io.on('connection', (socket) => {
 })
 
 export { app, io, server }
+// io.to(id).emit()
